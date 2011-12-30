@@ -12,7 +12,7 @@ Added features right now:
 
 Next on the list:
 
--Tweet Marker
+- Tweet Marker
 
 # Contact
 
