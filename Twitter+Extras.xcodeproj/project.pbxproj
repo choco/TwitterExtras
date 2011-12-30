@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B9D8B9514AD369F00020BBE /* NSString+TE.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9D8B9414AD369F00020BBE /* NSString+TE.m */; };
+		3BC2359B14AB37F200AED6EA /* TEPreferecesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2359914AB37F200AED6EA /* TEPreferecesViewController.m */; };
+		3BC2359C14AB37F200AED6EA /* TEPreferecesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2359A14AB37F200AED6EA /* TEPreferecesViewController.xib */; };
+		3BC235A414AB47BF00AED6EA /* ExtrasPref.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BC235A314AB47BF00AED6EA /* ExtrasPref.png */; };
+		3BC235AC14AB57B100AED6EA /* TEMuteRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BC235AB14AB57B100AED6EA /* TEMuteRule.m */; };
+		3BD3576214ACD6FE00EECFBF /* TEAddRulePrefWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD3576014ACD6FE00EECFBF /* TEAddRulePrefWindowController.m */; };
+		3BD3576314ACD6FE00EECFBF /* TEAddRulePrefWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD3576114ACD6FE00EECFBF /* TEAddRulePrefWindowController.xib */; };
+		3BE0786314AA143300C9B00A /* Twitter+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0786214AA143300C9B00A /* Twitter+Extras.m */; };
+		3BEDE2FA14AA121F00B8404E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEDE2F914AA121F00B8404E /* Cocoa.framework */; };
+		3BEDE30414AA121F00B8404E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3BEDE30214AA121F00B8404E /* InfoPlist.strings */; };
+		3BEDE30D14AA128700B8404E /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEDE30C14AA128700B8404E /* JRSwizzle.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3B9D8B9314AD369F00020BBE /* NSString+TE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+TE.h"; path = "Twitter+Extras/NSString+TE.h"; sourceTree = "<group>"; };
+		3B9D8B9414AD369F00020BBE /* NSString+TE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+TE.m"; path = "Twitter+Extras/NSString+TE.m"; sourceTree = "<group>"; };
+		3BC2359814AB37F200AED6EA /* TEPreferecesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEPreferecesViewController.h; path = "Twitter+Extras/TEPreferecesViewController.h"; sourceTree = "<group>"; };
+		3BC2359914AB37F200AED6EA /* TEPreferecesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEPreferecesViewController.m; path = "Twitter+Extras/TEPreferecesViewController.m"; sourceTree = "<group>"; };
+		3BC2359A14AB37F200AED6EA /* TEPreferecesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TEPreferecesViewController.xib; path = "Twitter+Extras/TEPreferecesViewController.xib"; sourceTree = "<group>"; };
+		3BC235A314AB47BF00AED6EA /* ExtrasPref.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ExtrasPref.png; sourceTree = "<group>"; };
+		3BC235AA14AB57B100AED6EA /* TEMuteRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEMuteRule.h; path = "Twitter+Extras/TEMuteRule.h"; sourceTree = "<group>"; };
+		3BC235AB14AB57B100AED6EA /* TEMuteRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEMuteRule.m; path = "Twitter+Extras/TEMuteRule.m"; sourceTree = "<group>"; };
+		3BD3575F14ACD6FE00EECFBF /* TEAddRulePrefWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TEAddRulePrefWindowController.h; path = "Twitter+Extras/TEAddRulePrefWindowController.h"; sourceTree = "<group>"; };
+		3BD3576014ACD6FE00EECFBF /* TEAddRulePrefWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TEAddRulePrefWindowController.m; path = "Twitter+Extras/TEAddRulePrefWindowController.m"; sourceTree = "<group>"; };
+		3BD3576114ACD6FE00EECFBF /* TEAddRulePrefWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TEAddRulePrefWindowController.xib; path = "Twitter+Extras/TEAddRulePrefWindowController.xib"; sourceTree = "<group>"; };
+		3BD3576514ACFFF800EECFBF /* Twitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Twitter.h; path = "Twitter+Extras/Twitter.h"; sourceTree = "<group>"; };
+		3BD3576614AD004100EECFBF /* TwitterAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterAccount.h; path = "Twitter+Extras/TwitterAccount.h"; sourceTree = "<group>"; };
+		3BE0786114AA143300C9B00A /* Twitter+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Twitter+Extras.h"; path = "Twitter+Extras/Twitter+Extras.h"; sourceTree = "<group>"; };
+		3BE0786214AA143300C9B00A /* Twitter+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Twitter+Extras.m"; path = "Twitter+Extras/Twitter+Extras.m"; sourceTree = "<group>"; };
+		3BE0786714AA275200C9B00A /* TwitterStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterStatus.h; path = "Twitter+Extras/TwitterStatus.h"; sourceTree = "<group>"; };
+		3BE0786814AA280700C9B00A /* TwitterUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterUser.h; path = "Twitter+Extras/TwitterUser.h"; sourceTree = "<group>"; };
+		3BEDE2F614AA121F00B8404E /* Twitter+Extras.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Twitter+Extras.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BEDE2F914AA121F00B8404E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3BEDE2FC14AA121F00B8404E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3BEDE2FD14AA121F00B8404E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3BEDE2FE14AA121F00B8404E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3BEDE30114AA121F00B8404E /* Twitter+Extras-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Twitter+Extras-Info.plist"; sourceTree = "<group>"; };
+		3BEDE30314AA121F00B8404E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3BEDE30514AA121F00B8404E /* Twitter+Extras-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Twitter+Extras-Prefix.pch"; sourceTree = "<group>"; };
+		3BEDE30B14AA128700B8404E /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JRSwizzle.h; path = "Twitter+Extras/JRSwizzle.h"; sourceTree = "<group>"; };
+		3BEDE30C14AA128700B8404E /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JRSwizzle.m; path = "Twitter+Extras/JRSwizzle.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BEDE2F314AA121F00B8404E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BEDE2FA14AA121F00B8404E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BAADA4F14AE275400804C4D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3BAADA5414AE280B00804C4D /* Model */,
+				3BAADA5314AE279E00804C4D /* Twitter Headers */,
+				3BAADA5214AE279B00804C4D /* Additions */,
+				3BAADA5114AE276F00804C4D /* Controllers */,
+				3BE0786114AA143300C9B00A /* Twitter+Extras.h */,
+				3BE0786214AA143300C9B00A /* Twitter+Extras.m */,
+			);
+			name = Classes;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		3BAADA5114AE276F00804C4D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3BC2359814AB37F200AED6EA /* TEPreferecesViewController.h */,
+				3BC2359914AB37F200AED6EA /* TEPreferecesViewController.m */,
+				3BC2359A14AB37F200AED6EA /* TEPreferecesViewController.xib */,
+				3BD3575F14ACD6FE00EECFBF /* TEAddRulePrefWindowController.h */,
+				3BD3576014ACD6FE00EECFBF /* TEAddRulePrefWindowController.m */,
+				3BD3576114ACD6FE00EECFBF /* TEAddRulePrefWindowController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3BAADA5214AE279B00804C4D /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				3BEDE30B14AA128700B8404E /* JRSwizzle.h */,
+				3BEDE30C14AA128700B8404E /* JRSwizzle.m */,
+				3B9D8B9314AD369F00020BBE /* NSString+TE.h */,
+				3B9D8B9414AD369F00020BBE /* NSString+TE.m */,
+			);
+			name = Additions;
+			sourceTree = "<group>";
+		};
+		3BAADA5314AE279E00804C4D /* Twitter Headers */ = {
+			isa = PBXGroup;
+			children = (
+				3BD3576614AD004100EECFBF /* TwitterAccount.h */,
+				3BE0786714AA275200C9B00A /* TwitterStatus.h */,
+				3BE0786814AA280700C9B00A /* TwitterUser.h */,
+				3BD3576514ACFFF800EECFBF /* Twitter.h */,
+			);
+			name = "Twitter Headers";
+			sourceTree = "<group>";
+		};
+		3BAADA5414AE280B00804C4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3BC235AA14AB57B100AED6EA /* TEMuteRule.h */,
+				3BC235AB14AB57B100AED6EA /* TEMuteRule.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3BEDE2EB14AA121F00B8404E = {
+			isa = PBXGroup;
+			children = (
+				3BEDE2FF14AA121F00B8404E /* Twitter+Extras */,
+				3BEDE2F814AA121F00B8404E /* Frameworks */,
+				3BEDE2F714AA121F00B8404E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3BEDE2F714AA121F00B8404E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BEDE2F614AA121F00B8404E /* Twitter+Extras.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BEDE2F814AA121F00B8404E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BEDE2F914AA121F00B8404E /* Cocoa.framework */,
+				3BEDE2FB14AA121F00B8404E /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BEDE2FB14AA121F00B8404E /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BEDE2FC14AA121F00B8404E /* AppKit.framework */,
+				3BEDE2FD14AA121F00B8404E /* CoreData.framework */,
+				3BEDE2FE14AA121F00B8404E /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		3BEDE2FF14AA121F00B8404E /* Twitter+Extras */ = {
+			isa = PBXGroup;
+			children = (
+				3BAADA4F14AE275400804C4D /* Classes */,
+				3BEDE30014AA121F00B8404E /* Supporting Files */,
+			);
+			path = "Twitter+Extras";
+			sourceTree = "<group>";
+		};
+		3BEDE30014AA121F00B8404E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BC235A314AB47BF00AED6EA /* ExtrasPref.png */,
+				3BEDE30114AA121F00B8404E /* Twitter+Extras-Info.plist */,
+				3BEDE30214AA121F00B8404E /* InfoPlist.strings */,
+				3BEDE30514AA121F00B8404E /* Twitter+Extras-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BEDE2F514AA121F00B8404E /* Twitter+Extras */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BEDE30814AA121F00B8404E /* Build configuration list for PBXNativeTarget "Twitter+Extras" */;
+			buildPhases = (
+				3BEDE2F214AA121F00B8404E /* Sources */,
+				3BEDE2F314AA121F00B8404E /* Frameworks */,
+				3BEDE2F414AA121F00B8404E /* Resources */,
+				3BE0786614AA156200C9B00A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Twitter+Extras";
+			productName = "Twitter+Extras";
+			productReference = 3BEDE2F614AA121F00B8404E /* Twitter+Extras.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BEDE2ED14AA121F00B8404E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "!cHoco Code";
+			};
+			buildConfigurationList = 3BEDE2F014AA121F00B8404E /* Build configuration list for PBXProject "Twitter+Extras" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3BEDE2EB14AA121F00B8404E;
+			productRefGroup = 3BEDE2F714AA121F00B8404E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BEDE2F514AA121F00B8404E /* Twitter+Extras */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BEDE2F414AA121F00B8404E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BEDE30414AA121F00B8404E /* InfoPlist.strings in Resources */,
+				3BC2359C14AB37F200AED6EA /* TEPreferecesViewController.xib in Resources */,
+				3BC235A414AB47BF00AED6EA /* ExtrasPref.png in Resources */,
+				3BD3576314ACD6FE00EECFBF /* TEAddRulePrefWindowController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3BE0786614AA156200C9B00A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# ensure user-local SIMBL plugins folder exists\nmkdir -p \"${USER_LIBRARY_DIR}/Application Support/SIMBL/Plugins\"\n\nif [ -a \"${USER_LIBRARY_DIR}/Application Support/SIMBL/Plugins/${FULL_PRODUCT_NAME}\" ]; then\nrm -Rf \"${USER_LIBRARY_DIR}/Application Support/SIMBL/Plugins/${FULL_PRODUCT_NAME}\"\nfi\n\n# Depending on the build configuration, either copy or link to the most recent product\nif [ \"${CONFIGURATION}\" == \"Debug\" ]; then\n# if we're debugging, add a symbolic link to the plug-in\nln -sf \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" \"${USER_LIBRARY_DIR}/Application Support/SIMBL/Plugins/${FULL_PRODUCT_NAME}\"\nelif [ \"${CONFIGURATION}\" == \"Release\" ]; then\n# if we're compiling for release, just copy the plugin to the SIMBL Plugins folder\ncp -Rfv \"${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}\" \"${USER_LIBRARY_DIR}/Application Support/SIMBL/Plugins/${FULL_PRODUCT_NAME}\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BEDE2F214AA121F00B8404E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BEDE30D14AA128700B8404E /* JRSwizzle.m in Sources */,
+				3BE0786314AA143300C9B00A /* Twitter+Extras.m in Sources */,
+				3BC2359B14AB37F200AED6EA /* TEPreferecesViewController.m in Sources */,
+				3BC235AC14AB57B100AED6EA /* TEMuteRule.m in Sources */,
+				3BD3576214ACD6FE00EECFBF /* TEAddRulePrefWindowController.m in Sources */,
+				3B9D8B9514AD369F00020BBE /* NSString+TE.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3BEDE30214AA121F00B8404E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BEDE30314AA121F00B8404E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3BEDE30614AA121F00B8404E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3BEDE30714AA121F00B8404E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3BEDE30914AA121F00B8404E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Twitter+Extras/Twitter+Extras-Prefix.pch";
+				INFOPLIST_FILE = "Twitter+Extras/Twitter+Extras-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		3BEDE30A14AA121F00B8404E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Twitter+Extras/Twitter+Extras-Prefix.pch";
+				INFOPLIST_FILE = "Twitter+Extras/Twitter+Extras-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BEDE2F014AA121F00B8404E /* Build configuration list for PBXProject "Twitter+Extras" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BEDE30614AA121F00B8404E /* Debug */,
+				3BEDE30714AA121F00B8404E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BEDE30814AA121F00B8404E /* Build configuration list for PBXNativeTarget "Twitter+Extras" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BEDE30914AA121F00B8404E /* Debug */,
+				3BEDE30A14AA121F00B8404E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3BEDE2ED14AA121F00B8404E /* Project object */;
+}
