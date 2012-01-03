@@ -66,6 +66,7 @@
                 }
             }
         }
+        [self changeTooltipText:nil];
         
     }
     else{
@@ -90,6 +91,24 @@
     placeHolderItem.title = [selectedAccounts componentsJoinedByString:@", "];
 }
 
+- (IBAction)changeTooltipText:(id)sender
+{
+    switch (ruleType.selectedTag) {
+        case 1:
+            ruleTextTooltip.stringValue = @"#";
+            break;
+        case 2:
+        case 3:
+            ruleTextTooltip.stringValue = @"@";
+            break;
+        case 4:
+            ruleTextTooltip.stringValue = @"";
+            break;
+            
+        default:
+            break;
+    }
+}
 
 - (IBAction)confirmAddRuleButtonPressed:(id)sender
 {

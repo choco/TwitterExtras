@@ -22,6 +22,7 @@
     IBOutlet NSWindow *window;
     IBOutlet NSButton *doneButton;
     
+    IBOutlet NSTextField *ruleTextTooltip;
     IBOutlet NSTextField *ruleName;
     IBOutlet NSTextField *ruleText;
     IBOutlet NSPopUpButton *ruleType;
@@ -46,6 +47,7 @@
 - (IBAction)accountMenuItemSelected:(id)sender;
 - (IBAction)confirmAddRuleButtonPressed:(id)sender;
 - (IBAction)cancelAddRulleButtonPressed:(id)sender;
+- (IBAction)changeTooltipText:(id)sender;
 
 - (id)initWithRule:(TEMuteRule *)rule;
 
