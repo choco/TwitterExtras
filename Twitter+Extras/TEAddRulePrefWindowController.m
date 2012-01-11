@@ -102,10 +102,12 @@
             ruleTextTooltip.stringValue = @"@";
             break;
         case 4:
+        case 5:
             ruleTextTooltip.stringValue = @"";
             break;
             
         default:
+            ruleTextTooltip.stringValue = @"";
             break;
     }
 }

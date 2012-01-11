@@ -8,11 +8,11 @@ So I decided to add new features myself, using SIMBL. That's my first SIMBL expe
 
 Added features right now:
 
-- Mute filters
+- Mute filters (Right now you need to restart the client if you want them to be applied to your existing tweets)
 
 Next on the list:
 
-- Tweet Marker
+- Tweet Marker (Unfortunately the tweetmarker guys decided to ignore my emails, so without access to their api don't know what I can do :/)
 
 # Contact
 

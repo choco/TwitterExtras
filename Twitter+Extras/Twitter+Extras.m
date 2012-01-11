@@ -171,6 +171,12 @@
                             }
                             break;
                         }
+                        case 5:
+                        {
+                            if([rule.ruleText isEqualToString:status.sourceName])
+                                return YES;
+                            break;
+                        }
                         default:
                             break;
                     }

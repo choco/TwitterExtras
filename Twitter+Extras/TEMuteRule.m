@@ -81,5 +81,12 @@
     }
     return  NO;
 }
+- (BOOL)isTwitterClientRule
+{
+    if (ruleType == 5) {
+        return YES; 
+    }
+    return NO;
+}
 
 @end

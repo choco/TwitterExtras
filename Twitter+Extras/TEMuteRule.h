@@ -36,6 +36,7 @@
  2- From Twitter username
  3- Mentions Twitter username
  4- Tweet text
+ 5- Twitter client
  */
 
 @property (nonatomic, assign) int ruleType;
@@ -63,6 +64,7 @@
 - (BOOL)isFromUserRule;
 - (BOOL)isMentionUserRule;
 - (BOOL)isTweetTextRule;
+- (BOOL)isTwitterClientRule;
 - (BOOL)isEnabled;
 
 @end
