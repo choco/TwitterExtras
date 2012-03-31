@@ -1,3 +1,8 @@
+//
+//  TwitterStatus.h
+//  Twitter+Extras
+//
+
 #import "TwitterUser.h"
 
 @interface TwitterStatus : NSObject

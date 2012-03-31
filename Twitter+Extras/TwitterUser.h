@@ -1,3 +1,8 @@
+//
+//  TwitterUser.h
+//  Twitter+Extras
+//
+
 @interface TwitterUser : NSObject
 {
     NSDate *lastUpdated;	// 4 = 0x4

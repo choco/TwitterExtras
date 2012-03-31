@@ -33,7 +33,7 @@
 
 - (void)awakeFromNib
 {
-    //Brace yourself, here come the magic!
+    //Brace yourself, here comes the magic!
     Class twitterMetaClass = objc_getClass("Twitter");
 	id sharedTwitter = objc_msgSend(twitterMetaClass, @selector(sharedTwitter));
     NSMutableArray *accounts = objc_msgSend(sharedTwitter, @selector(accounts));

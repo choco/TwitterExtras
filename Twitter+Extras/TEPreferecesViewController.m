@@ -43,6 +43,7 @@
 
 - (void)saveDataToDisk
 {
+    NSLog(@"Saving rules...");
     NSString *path = [self pathForDataFile];
     
     NSMutableDictionary *rootObject = [NSMutableDictionary dictionary];

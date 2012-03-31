@@ -4,104 +4,6 @@
  *     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2011 by Steve Nygard.
  */
 
-#pragma mark Named Structures
-
-struct ABUIEdgeInsets {
-    float top;
-    float left;
-    float bottom;
-    float right;
-};
-
-struct CGAffineTransform {
-    float _field1;
-    float _field2;
-    float _field3;
-    float _field4;
-    float _field5;
-    float _field6;
-};
-
-struct CGContext;
-
-struct CGPoint {
-    float x;
-    float y;
-};
-
-struct CGRect {
-    struct CGPoint origin;
-    struct CGSize size;
-};
-
-struct CGSize {
-    float width;
-    float height;
-};
-
-struct EventHotKeyID {
-    unsigned int signature;
-    unsigned int id;
-};
-
-struct UCKeyboardLayout {
-    unsigned short _field1;
-    unsigned short _field2;
-    unsigned int _field3;
-    unsigned int _field4;
-    struct UCKeyboardTypeHeader _field5[1];
-};
-
-struct UCKeyboardTypeHeader {
-    unsigned int keyboardTypeFirst;
-    unsigned int keyboardTypeLast;
-    unsigned int keyModifiersToTableNumOffset;
-    unsigned int keyToCharTableIndexOffset;
-    unsigned int keyStateRecordsIndexOffset;
-    unsigned int keyStateTerminatorsOffset;
-    unsigned int keySequenceDataIndexOffset;
-};
-
-struct _KeyCombo {
-    unsigned int flags;
-    int code;
-};
-
-struct _NSRange {
-    unsigned int location;
-    unsigned int length;
-};
-
-#pragma mark Typedef'd Structures
-
-typedef struct {
-    unsigned long _field1;
-    id *_field2;
-    unsigned long *_field3;
-    unsigned long _field4[5];
-} CDStruct_11f37819;
-
-typedef struct {
-    int _field1;
-    int _field2;
-    void *_field3;
-} CDStruct_da23731b;
-
-typedef struct {
-    int _field1;
-    int _field2;
-} CDStruct_1ef3fb1f;
-
-#pragma mark -
-
-/*
- * File: /Applications/Twitter.app/Contents/MacOS/Twitter
- * UUID: CA44E808-18DD-3A3A-B5DB-47D44A336A3F
- * Arch: Intel 80x86 (i386)
- *
- *       Objective-C Garbage Collection: Unsupported
- */
-
 @protocol ABActiveTextRange <NSObject, NSCopying>
 - (id)displayString;
 - (int)rangeFlavor;
@@ -3842,6 +3744,7 @@ typedef struct {
     NSMutableArray *contributors;	// 52 = 0x34
     NSString *inReplyToStatusID;	// 56 = 0x38
     GeoRSSPoint *location;	// 60 = 0x3c
+
     TwitterPlace *place;	// 64 = 0x40
     TwitterStatus *retweetedStatus;	// 68 = 0x44
     TwitterStatus *retweetingStatus;	// 72 = 0x48
@@ -8099,7 +8002,7 @@ typedef struct {
 - (id)_topSubview;	// IMP=0x00006d88
 - (id)_bottomSubview;	// IMP=0x00006db9
 - (void)bringSubviewToFront:(id)arg1;	// IMP=0x00006e1f
-- (void)sendSubviewToBack:(id)arg1;	// IMP=0x00006ed0
+- (void)sendSubviewTo		:(id)arg1;	// IMP=0x00006ed0
 - (void)willMoveToWindow:(id)arg1;	// IMP=0x00005e34
 - (void)didMoveToWindow;	// IMP=0x00005e39
 - (void)didAddSubview:(id)arg1;	// IMP=0x00005e3e

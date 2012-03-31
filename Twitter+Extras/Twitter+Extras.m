@@ -18,11 +18,13 @@
 
 @end
 
-
 @implementation NSWindowController(TE)
 
 //probably should choose a better place to save
 //right now if user closes twitter when preferences window is open it won't save rules
+
+//UPDATE: found a better place :)
+
 
 - (BOOL)TwitterExtras_windowShouldClose:(id)arg
 {
@@ -79,18 +81,101 @@
 
 @implementation NSObject(TE)
 
+- (void)TwitterExtras_applicationWillTerminate:(NSNotification *)notification
+{
+    NSLog(@"[+] Cleaning my mess...");
+    if ([TwitterExtras sharedInstance].extrasViewController) {
+        [[TwitterExtras sharedInstance].extrasViewController saveDataToDisk];
+        [[TwitterExtras sharedInstance].extrasViewController release];
+        [TwitterExtras sharedInstance].extrasViewController = nil;
+    }
+    [self TwitterExtras_applicationWillTerminate:notification];
+}
+
+- (id)TwitterExtras_menuForEvent:(id)event
+{
+    NSMenu * originalMenu = [self TwitterExtras_menuForEvent:event];
+    if (![(TMStatusCell *)self mine]) {
+        NSMenuItem *tmMenuItem = [[NSMenuItem alloc] initWithTitle:@"Set as last read Tweet" action:@selector(setLastReadTweetOnTM:) keyEquivalent:@""];
+        [tmMenuItem setTarget:self];
+        [originalMenu addItem:tmMenuItem];
+        [tmMenuItem release];
+    }
+    return originalMenu;
+}
+
+- (void)setLastReadTweetOnTM:(id)sender
+{
+    TMStatusListViewController* listViewController;
+    object_getInstanceVariable([sender target], "listViewController", (void**)&listViewController);
+    NSString *account = [(TwitterAccount *)[listViewController account] username];
+    TwitterStatus *status = [(TMStatusCell *)[(NSMenuItem *)sender target] status];
+    NSString *statusID = [status statusID];
+    if ([[[[status text] componentsSeparatedByString:@" "] objectAtIndex:0] isEqualToString:[NSString stringWithFormat:@"@%@", account]] ) {
+        /*NSImage *tm = [[NSImage alloc] initWithContentsOfFile:[[NSBundle bundleForClass:NSClassFromString(@"TwitterExtras")] pathForResource:@"tm" ofType:@"png"]];
+        Class imageMetaClass = objc_getClass("ABUIImage");
+        id tmImage = objc_msgSend(imageMetaClass, @selector(imageWithData:), [tm TIFFRepresentation]);
+        Class imageViewMetaClass = objc_getClass("ABUIImageView");
+        id tmView = objc_msgSend(imageViewMetaClass, @selector(alloc));
+        tmView = objc_msgSend(tmView, @selector(initWithImage:), tmImage);
+        //ABUIImageView *tmView = [[ABUIImageView alloc] initWithImage:[ABUIImage imageWithData:[tm TIFFRepresentation]]];
+        NSLog(@"%@", tmView);
+        [(TMStatusCell *)[(NSMenuItem *)sender target] addSubview:tmView];
+        Class colorMetaClass = objc_getClass("ABUIColor");
+        [(TMStatusCell *)[(NSMenuItem *)sender target] setBackgroundColor:objc_msgSend(colorMetaClass, @selector(redColor))];*/
+        if([TETweetMarker setLastStatusID:statusID forTwitterAccount:(TwitterAccount *)[listViewController account] forCollection:@"mentions"])
+        {
+            NSLog(@"[+] Mentions status ID %@ setting succeded", statusID);
+        }
+        else {
+            NSLog(@"[+] Mentions status ID %@ setting failed", statusID);
+        }
+    }
+    else {
+        if([TETweetMarker setLastStatusID:statusID forTwitterAccount:(TwitterAccount *)[listViewController account] forCollection:@"timeline"])
+        {
+            NSLog(@"[+] Timeline status ID %@ setting succeded", statusID);
+        }
+        else {
+            NSLog(@"[+] Timeline status ID %@ setting failed", statusID);
+        }
+    }
+}
+
+
+- (void)TwitterExtras_refresh
+{
+    NSLog(@"That's a refresh!");
+    [self TwitterExtras_refresh];
+}
+
+- (void)TwitterExtras_loadNewer
+{
+    NSLog(@"Load newer!");
+    [self TwitterExtras_loadNewer];
+}
+
+- (void)TwitterExtras_refreshTimelines
+{
+    NSLog(@"[+] Refreshing for account %@", [(TwitterAccount *)self username]);
+    [self TwitterExtras_refreshTimelines];
+}
+
+- (void)TwitterExtras_friendsTimelineSinceID:(id)minID maxID:(id)maxID count:(id)count page:(id)page
+{
+    NSLog(@"[+] Loading Tweets from ID:%@ to ID:%@ count:%@ and page:%@", minID, maxID, count, page);
+    [self TwitterExtras_friendsTimelineSinceID:minID maxID:maxID count:count page:page];
+}
 
 //this one is used for every twitterstream :D
 - (void)TwitterExtras_setStatuses:(id)statuses
 {
-    //NSLog(@"TwitterAccount: %@", ((TwitterTimelinetStream *)self).account.username);
-    //NSLog(@"Statuses: %@", statuses);
     NSMutableArray *newStatuses = [NSMutableArray arrayWithArray:statuses];
     NSMutableArray *discardedStatuses = [NSMutableArray array];
     
     for (TwitterStatus *status in newStatuses) {
         if ([[TwitterExtras sharedInstance] shouldDiscardStatus:status forAccount:((TwitterTimelinetStream *)self).account.username]) {
-            NSLog(@"Removing following status: %@", status);
+            NSLog(@"[+] Removing following status: %@", status);
             [discardedStatuses addObject:status];
         }
     }
@@ -234,7 +319,16 @@
         
         [NSClassFromString(@"TweetiePreferencesWindowController") jr_swizzleMethod:@selector(toolbar:itemForItemIdentifier:willBeInsertedIntoToolbar:)
                                                                         withMethod:@selector(TwitterExtras_toolbar:itemForItemIdentifier:willBeInsertedIntoToolbar:) error:NULL];
-        [NSClassFromString(@"TweetiePreferencesWindowController") jr_swizzleMethod:@selector(windowShouldClose:) withMethod:@selector(TwitterExtras_windowShouldClose:) error:nil];
+        //[NSClassFromString(@"TweetiePreferencesWindowController") jr_swizzleMethod:@selector(windowShouldClose:) withMethod:@selector(TwitterExtras_windowShouldClose:) error:nil];
+        [NSClassFromString(@"TwitterAPI") jr_swizzleMethod:@selector(friendsTimelineSinceID:maxID:count:page:) withMethod:@selector(TwitterExtras_friendsTimelineSinceID:maxID:count:page:) error:nil];
+        [NSClassFromString(@"TwitterAccount") jr_swizzleMethod:@selector(refreshTimelines) withMethod:@selector(TwitterExtras_refresh) error:nil];
+        [NSClassFromString(@"TwitterAccount") jr_swizzleMethod:@selector(refresh) withMethod:@selector(TwitterExtras_refreshTimelines) error:nil];
+        [NSClassFromString(@"NSObject") jr_swizzleMethod:@selector(performSelector:withObject:afterDelay:) withMethod:@selector(TwitterExtras_performSelector:withObject:afterDelay:) error:nil];
+        [NSClassFromString(@"TwitterTimelineStream") jr_swizzleMethod:@selector(_loadNewer) withMethod:@selector(TwitterExtras_loadNewer) error:nil];
+
+        [NSClassFromString(@"TMStatusCell") jr_swizzleMethod:@selector(menuForEvent:) withMethod:@selector(TwitterExtras_menuForEvent:) error:nil];
+        [NSClassFromString(@"Tweetie2AppDelegate") jr_swizzleMethod:@selector(applicationWillTerminate:) withMethod:@selector(TwitterExtras_applicationWillTerminate:) error:nil];
+
         [self loadDataFromDisk];
     }
     return self;
@@ -255,10 +349,11 @@
     return plugin;
 }
 
+
 + (void)load
 {
     [self sharedInstance];
-    NSLog(@"Twitter Extras %@ Loaded", self.pluginVersion);
+    NSLog(@"[+] Twitter Extras %@ Loaded", self.pluginVersion);
 }
 
 
