@@ -1,6 +1,7 @@
 # Twitter+Extras 0.0.2
 
 **Right now this project is dead, since I can't add retina graphics to the app throght a SIMBL plugin, every other feature seems superflous. Don't be sad, I'm working on something bigger :)**
+
 The fine folks at Twitter didn't update their Mac app in ages, they bought Tweetdeck and redesigned the Twitter experience, so I don't know how long it will take before the app gets scewed.
 
 So I decided to add new features myself, using SIMBL. That's my first SIMBL experiment so be gentle :D Right now everything is just an hack put toghether in 3 days during spare time.
